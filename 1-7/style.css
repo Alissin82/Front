@@ -1,0 +1,68 @@
+@font-face {
+    font-family: iransans; 
+    src: url(iransansweb.ttf);
+  }
+
+*{
+    font-size: 16px;
+    font-family: iransans;
+    box-sizing: border-box;
+}
+
+.inline-text-field-container{
+  display: inline-block;
+  position: relative;
+}
+
+input{
+  min-width: 20em;
+  min-height:2em;
+  padding: 1em 1em 1em 3em;
+  border-radius: 0.2em;
+  border: 0.1em solid gray;
+  vertical-align: middle;
+}
+
+.mid{
+  position: absolute;
+  top: 1.15em;
+  z-index: 100;
+}
+
+.input-label{
+  transition: 0.2s;
+  right: 1.1em;
+}
+
+.input-icon{
+  left: 1.1em;
+}
+.input-icon i{
+  margin-right: 0.5em;
+  font-size: 1.5em;
+}
+
+input:focus ~ .attached-container .input-label, .labeltop{
+  transition: 0.2s;
+  top: -0.8em;
+  padding: 0em 0.25em;
+  background-color: white;
+  right: 0.85em;
+}
+
+input:focus ~ .attached-container .input-label label, .labeltop label{
+  font-size: 0.75em;  
+}
+
+input:focus{
+  border-color: purple;
+}
+
+input:focus ~ .attached-container .input-label label{
+  color: purple ;
+}
+
+.text-help{
+  font-size: 0.7em;
+  padding: 0.2em 1em;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <title>label outline</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="inline-text-field-container">
+      
+
+        <div class="text-field">
+          
+            <!-- <i aria-hidden="true" class="material-icons mdc-text-field__icon">favorite</i>
+            
+            <i aria-hidden="true" class="material-icons mdc-text-field__icon">visibility</i> -->
+            
+            <input id="text-input" maxlength="20" onchange="inputlabel();" class="">
+                
+            <div class="attached-container">
+                <!--<div class="mdc-notched-outline__leading"></div>-->
+
+                <div class="mid input-label" id="input-label">        
+                    <label for="demo-mdc-text-field">عنوان</label>
+                </div>
+                <div class="mid input-icon"><i class="fas fa-user"></i></div>
+            </div>
+        </div>
+        <div class="text-help">پیام راهنما</div>
+        <!--<div class="mdc-text-field-character-counter">0 / 20</div> -->
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/6b852257bc.js" crossorigin="anonymous"></script>
+<script>
+    function inputlabel(){
+        var input_text = document.getElementById('text-input').value;
+        if(input_text != ""){
+            document.getElementById('input-label').className  += " labeltop";
+        }
+        else
+        {
+            document.getElementById('input-label').className  = "mid input-label";
+        }
+    }
+</script>
+</html>
